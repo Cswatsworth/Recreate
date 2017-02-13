@@ -14,7 +14,7 @@ class TestTicketRaffle < Minitest::Test
 
 	def test_off_by_one_true
 		raffle = create_raffle_array(["142536","142563","142539","142593","142596"])
-		assert_equal(['True'], create_raffle_array.off_by_one("142539","142536"))
+		assert_equal(['True'], create_raffle_array.include?("142539","142536"))
 	end
 
 end
