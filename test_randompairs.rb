@@ -8,8 +8,13 @@ class TestRandomPairs < Minitest::Test
 		assert_equal(1, pairs.count)
 	end
 
-	def test_three_colors_returns_two_pairs
+	def test_six_colors_returns_two_pairs
 		pairs = create_random_pairs(['Blue','Green','Red','Orange','Yellow','Pink'])
+		assert_equal(2, pairs.count)
+	end
+
+	def test_seven_colors_returns_two_pairs
+		pairs = create_random_pairs(['Blue','Green','Red','Orange','Yellow','Pink','White'])
 		assert_equal(2, pairs.count)
 	end
 end
